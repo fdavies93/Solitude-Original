@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7D873E52-12AE-4855-A1A9-65D5D82E48EB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Frank\Documents\Documents\Programming\C++\libs\allegro-msvc2015-x64-5.1.12\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ALLEGRO_STATICLINK</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Frank\Documents\Documents\Programming\C++\libs\allegro-msvc2015-x64-5.1.12\allegro\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>allegro_monolith.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Frank\Documents\Documents\Programming\C++\libs\allegro-msvc2015-x64-5.1.12\allegro\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ALLEGRO_STATICLINK</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Frank\Documents\Documents\Programming\C++\libs\allegro-msvc2015-x64-5.1.12\allegro\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>allegro_monolith.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="animation.cpp" />
+    <ClCompile Include="animationData.cpp" />
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="genericFunctions.cpp" />
+    <ClCompile Include="graphicsCache.cpp" />
+    <ClCompile Include="graphicsLoader.cpp" />
+    <ClCompile Include="graphicsThreadData.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="sol_animation.cpp" />
+    <ClCompile Include="sol_bitmap.cpp" />
+    <ClCompile Include="sol_dimensions.cpp" />
+    <ClCompile Include="sol_gameObject.cpp" />
+    <ClCompile Include="sol_graphicsControl.cpp" />
+    <ClCompile Include="sol_graphicsLayer.cpp" />
+    <ClCompile Include="sol_graphicsStorage.cpp" />
+    <ClCompile Include="sol_logicController.cpp" />
+    <ClCompile Include="sol_logicStorage.cpp" />
+    <ClCompile Include="sol_logicToGraphicsConverter.cpp" />
+    <ClCompile Include="sol_masterController.cpp" />
+    <ClCompile Include="sol_objectStaticAnimation.cpp" />
+    <ClCompile Include="sol_objectStaticBitmap.cpp" />
+    <ClCompile Include="sol_scene.cpp" />
+    <ClCompile Include="sol_sceneLayer.cpp" />
+    <ClCompile Include="sol_screenAnimation.cpp" />
+    <ClCompile Include="sol_screenBitmap.cpp" />
+    <ClCompile Include="sol_spaceFillingVector.cpp" />
+    <ClCompile Include="sol_templateStaticAnimation.cpp" />
+    <ClCompile Include="sol_templateStaticBitmap.cpp" />
+    <ClCompile Include="sol_virtualGraphicsObject.cpp" />
+    <ClCompile Include="spritesheetData.cpp" />
+    <ClCompile Include="templateBst.cpp" />
+    <ClCompile Include="templateBstNode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="animation.h" />
+    <ClInclude Include="animationData.h" />
+    <ClInclude Include="bitmapData.h" />
+    <ClInclude Include="console.h" />
+    <ClInclude Include="frameData.h" />
+    <ClInclude Include="genericFunctions.h" />
+    <ClInclude Include="graphicsCache.h" />
+    <ClInclude Include="graphicsCacheMessage.h" />
+    <ClInclude Include="graphicsContainer.h" />
+    <ClInclude Include="graphicsLoader.h" />
+    <ClInclude Include="graphicsThreadData.h" />
+    <ClInclude Include="graphicsThreadMessage.h" />
+    <ClInclude Include="graphicsThreadMessenger.h" />
+    <ClInclude Include="graphicsUncachingData.h" />
+    <ClInclude Include="sol_animation.h" />
+    <ClInclude Include="sol_bitmap.h" />
+    <ClInclude Include="sol_dimensions.h" />
+    <ClInclude Include="sol_frame.h" />
+    <ClInclude Include="sol_gameObject.h" />
+    <ClInclude Include="sol_graphicsConstants.h" />
+    <ClInclude Include="sol_graphicsControl.h" />
+    <ClInclude Include="sol_graphicsGroup.h" />
+    <ClInclude Include="sol_graphicsLayer.h" />
+    <ClInclude Include="sol_graphicsModule.h" />
+    <ClInclude Include="sol_graphicsStorage.h" />
+    <ClInclude Include="sol_logicCamera.h" />
+    <ClInclude Include="sol_logicConstants.h" />
+    <ClInclude Include="sol_logicController.h" />
+    <ClInclude Include="sol_logicLayer.h" />
+    <ClInclude Include="sol_logicStorage.h" />
+    <ClInclude Include="sol_logicToGraphicsConverter.h" />
+    <ClInclude Include="sol_masterController.h" />
+    <ClInclude Include="sol_objectStaticAnimation.h" />
+    <ClInclude Include="sol_objectStaticBitmap.h" />
+    <ClInclude Include="sol_scene.h" />
+    <ClInclude Include="sol_sceneLayer.h" />
+    <ClInclude Include="sol_screenAnimation.h" />
+    <ClInclude Include="sol_screenBitmap.h" />
+    <ClInclude Include="sol_spaceFillingVector.h" />
+    <ClInclude Include="sol_templateStaticAnimation.h" />
+    <ClInclude Include="sol_templateStaticBitmap.h" />
+    <ClInclude Include="sol_virtualGraphicsObject.h" />
+    <ClInclude Include="spaceFillingVector.h" />
+    <ClInclude Include="spritesheetCache.h" />
+    <ClInclude Include="spritesheetData.h" />
+    <ClInclude Include="templateBst.h" />
+    <ClInclude Include="templateBstNode.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
